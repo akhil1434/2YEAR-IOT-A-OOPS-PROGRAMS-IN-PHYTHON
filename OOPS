@@ -1,0 +1,54 @@
+class Car:
+    def __init__(self, brand, model):
+        self.brand = brand
+        self.model = model
+Object: An instance of a class. It represents a specific entity created using the class.
+
+Python
+
+Copy code
+my_car = Car("Toyota", "Corolla")
+Encapsulation: Bundling data (attributes) and methods into a single unit (class) and restricting direct access to some components.
+
+Python
+
+Copy code
+class BankAccount:
+    def __init__(self, balance):
+        self.__balance = balance  # Private attribute
+    def get_balance(self):
+        return self.__balance
+Inheritance: A mechanism to create a new class (child) from an existing class (parent), inheriting its properties and methods.
+
+Python
+
+Copy code
+class ElectricCar(Car):
+    def __init__(self, brand, model, battery):
+        super().__init__(brand, model)
+        self.battery = battery
+Polymorphism: The ability to use a single interface for different data types or classes.
+
+Python
+
+Copy code
+class Dog:
+    def sound(self):
+        return "Bark"
+class Cat:
+    def sound(self):
+        return "Meow"
+def animal_sound(animal):
+    print(animal.sound())
+Abstraction: Hiding implementation details and showing only the essential features.
+
+Python
+
+Copy code
+from abc import ABC, abstractmethod
+class Shape(ABC):
+    @abstractmethod
+    def area(self):
+        pass
+OOPS makes Python code more organized, scalable, and easier to debug.
+
